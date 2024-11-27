@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { Residence } from '../core/models/residence';
+import { Residence } from 'src/app/core/models/residence';
+
 @Component({
-  selector: 'app-residences-component',
-  templateUrl: './residences-component.component.html',
-  styleUrls: ['./residences-component.component.css']
+  selector: 'app-residences',
+  templateUrl: './residences.component.html',
+  styleUrls: ['./residences.component.css']
 })
-export class ResidencesComponentComponent {
+export class ResidencesComponent {
+
   listResidences:Residence[]=[
     {id:1,"name": "El fel","address":"Borj Cedria",
     "image":"../../assets/images/R1.jpeg", status: "Disponible"},
@@ -47,5 +49,7 @@ filteredResidences(): Residence[] {
     residence.address.toLowerCase().includes(this.searchAddress.toLowerCase())
   );
 }
-
 }
+
+
+

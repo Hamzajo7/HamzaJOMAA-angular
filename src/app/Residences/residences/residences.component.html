@@ -1,0 +1,18 @@
+<div *ngFor="let residence of filteredResidences()">
+    <h3>{{ residence.name }}</h3>
+    <img [src]="residence.image" alt="{{ residence.name }}" width="150">
+  
+    <p>Status : 
+      <span [ngSwitch]="residence.status">
+        <span *ngSwitchCase="'Disponible'">🟢 Disponible</span>
+        <span *ngSwitchCase="'En Construction'">🔨 En Construction</span>
+        <span *ngSwitchCase="'Vendu'">❌ Vendu</span>
+        <span *ngSwitchDefault>❓ Non défini</span>
+      </span>
+    </p>
+  
+    <button (click)="showLocation(residence)">Show Location</button>
+    <button (click)="addToFavorites(residence)">Like ❤️</button>
+    <button [routerLink]="['/apartments/residence', residence.id]">View Apartments</button>
+  </div>
+  
