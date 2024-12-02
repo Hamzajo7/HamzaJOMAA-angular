@@ -15,4 +15,7 @@
     <button (click)="addToFavorites(residence)">Like ❤️</button>
     <button [routerLink]="['/apartments/residence', residence.id]">View Apartments</button>
   </div>
-  
+  <div *ngFor="let residence of residence">
+    <h2>{{ residence.name }}</h2>
+    <button [routerLink]="['/residences', residence.id, 'apartments']">View Apartments</button>
+</div>

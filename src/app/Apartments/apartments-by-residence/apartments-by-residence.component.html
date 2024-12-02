@@ -1,1 +1,4 @@
-<p>apartments-by-residence works!</p>
+<h1>Apartments for Residence #{{ residenceId }}</h1>
+<ul *ngFor="let apartment of apartments">
+    <li>Apartment #{{ apartment.apartNum }} ({{ apartment.surface }} m²)</li>
+</ul>

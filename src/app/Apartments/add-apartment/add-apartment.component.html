@@ -1,1 +1,38 @@
-<p>add-apartment works!</p>
+<h1>Add New Apartment</h1>
+<form (ngSubmit)="saveApartment()">
+    <table>
+        <tr>
+            <td><label>Apartment Number:</label></td>
+            <td><input [(ngModel)]="apartment.apartNum" name="apartNum" required></td>
+        </tr>
+        <tr>
+            <td><label>Floor Number:</label></td>
+            <td><input [(ngModel)]="apartment.floorNum" name="floorNum" required></td>
+        </tr>
+        <tr>
+            <td><label>Surface Area:</label></td>
+            <td><input [(ngModel)]="apartment.surface" name="surface" required></td>
+        </tr>
+        <tr>
+            <td><label>Has Terrace:</label></td>
+            <td><input type="checkbox" [(ngModel)]="apartment.terrace" name="terrace"></td>
+        </tr>
+        <tr>
+            <td><label>Terrace Surface:</label></td>
+            <td><input [(ngModel)]="apartment.surfaceterrace" name="surfaceterrace"></td>
+        </tr>
+        <tr>
+            <td><label>Category:</label></td>
+            <td><input [(ngModel)]="apartment.category" name="category"></td>
+        </tr>
+        <tr>
+            <td><label>Residence ID:</label></td>
+            <td><input [(ngModel)]="apartment.ResidenceId" name="ResidenceId" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button type="submit">Save Apartment</button>
+            </td>
+        </tr>
+    </table>
+</form>

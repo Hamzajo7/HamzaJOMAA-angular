@@ -18,4 +18,13 @@ describe('ResidencesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+
+
+
+
+  
 });
+
+
