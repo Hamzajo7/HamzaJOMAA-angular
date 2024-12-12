@@ -5,12 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+export class HomeComponent {
+VAR1= 10;
+VAR2="https://seeklogo.com/images/A/angular-icon-logo-9946B9795D-seeklogo.com.png"
+VAR3="Hamza"
+list1=["Hamza","Nour","Hassan"]
+Function1(){
+  alert("Hello 4SE3");
+}
 
-  export class HomeComponent {
-    listResidences = [
-      { id: 1, name: "Residence 1", address: "Address 1", status: "Disponible" },
-      { id: 2, name: "Residence 2", address: "Address 2", status: "En Construction" },
-      // ... autres résidences
-    ];
-  }
-  
+}

@@ -1,9 +1,0 @@
-<h1>List of Apartments</h1>
-<ul *ngIf="apartments.length > 0">
-    <li *ngFor="let apartment of apartments">
-        Apartment #{{ apartment.apartNum }}
-    </li>
-</ul>
-<p *ngIf="apartments.length === 0">No apartments available.</p>
-
-<button [routerLink]="['/add-apartment']">Add Apartment</button>

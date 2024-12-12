@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./apartments.component.css']
 })
 export class ApartmentsComponent {
-  apartments: any[] = [];
 
 }

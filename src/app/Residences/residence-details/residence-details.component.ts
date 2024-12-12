@@ -7,14 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./residence-details.component.css']
 })
 export class ResidenceDetailsComponent {
-  residenceId!: number;
+  residenceId: any
+  constructor( private activatedroute : ActivatedRoute) { }
+  ngOnInit(): void {
+    this.residenceId = this.activatedroute.snapshot.paramMap.get('id');
 
-  constructor(private route: ActivatedRoute) {
-    this.residenceId = +this.route.snapshot.paramMap.get('id')!;
   }
-  
-  nextResidence() {
-    this.residenceId += 1;  // Logique simplifiée, vous pouvez ajuster cela selon les données disponibles.
-  }
-  
+
+
 }
